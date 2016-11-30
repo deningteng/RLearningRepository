@@ -1,12 +1,12 @@
-# dplyr°üÀ¨ÁË£¨¼¸ºõ£©È«²¿¿ÉÒÔÓÃÀ´¼Ó¿ìÊý¾Ý´¦Àí½ø³ÌµÄÄÚÈÝ¡£
-# Ëü×îÓÐÃûµÄÊÇÊý¾ÝÌ½Ë÷ºÍÊý¾Ý×ª»»¹¦ÄÜ¡£
-# ËüµÄÁ´Ê½Óï·¨ÈÃËüÊ¹ÓÃÆðÀ´ºÜ·½±ã¡£Ëü°üÀ¨5¸öÖ÷ÒªµÄÊý¾Ý´¦ÀíÖ¸Áî£º
-# ¹ýÂË¡ª¡ª¼¯ÓÚÄ³Ò»Ìõ¼þ¹ýÂËÊý¾Ý
-# Ñ¡Ôñ¡ª¡ªÑ¡³öÊý¾Ý¼¯ÖÐ¸ÐÐËÈ¤µÄÁÐ
-# ÅÅÁÐ¡ª¡ªÉýÐò»ò½µÐòÅÅÁÐÊý¾Ý¼¯ÖÐµÄÄ³Ò»¸öÖµÓò
-# ±ä»»¡ª¡ª´ÓÒÑÓÐ±äÁ¿Éú³ÉÐÂµÄ±äÁ¿
-# ¸ÅÀ¨£¨Í¨¹ýgroup_by£©¡ª¡ªÌá¹©³£ÓÃµÄ²Ù×÷·ÖÎö£¬Èç×îÐ¡Öµ¡¢×î´óÖµ¡¢¾ùÖµµÈ
-# Ö»ÐèÒª¹Ø×¢ÕâÐ©Ö¸Áî±ã¿ÉÒÔÍê³ÉºÜºÃµÄÊý¾ÝÌ½Ë÷¹¤×÷¡£
+# dplyråŒ…æ‹¬äº†ï¼ˆå‡ ä¹Žï¼‰å…¨éƒ¨å¯ä»¥ç”¨æ¥åŠ å¿«æ•°æ®å¤„ç†è¿›ç¨‹çš„å†…å®¹ã€‚
+# å®ƒæœ€æœ‰åçš„æ˜¯æ•°æ®æŽ¢ç´¢å’Œæ•°æ®è½¬æ¢åŠŸèƒ½ã€‚
+# å®ƒçš„é“¾å¼è¯­æ³•è®©å®ƒä½¿ç”¨èµ·æ¥å¾ˆæ–¹ä¾¿ã€‚å®ƒåŒ…æ‹¬5ä¸ªä¸»è¦çš„æ•°æ®å¤„ç†æŒ‡ä»¤ï¼š
+# è¿‡æ»¤â€”â€”é›†äºŽæŸä¸€æ¡ä»¶è¿‡æ»¤æ•°æ®
+# é€‰æ‹©â€”â€”é€‰å‡ºæ•°æ®é›†ä¸­æ„Ÿå…´è¶£çš„åˆ—
+# æŽ’åˆ—â€”â€”å‡åºæˆ–é™åºæŽ’åˆ—æ•°æ®é›†ä¸­çš„æŸä¸€ä¸ªå€¼åŸŸ
+# å˜æ¢â€”â€”ä»Žå·²æœ‰å˜é‡ç”Ÿæˆæ–°çš„å˜é‡
+# æ¦‚æ‹¬ï¼ˆé€šè¿‡group_byï¼‰â€”â€”æä¾›å¸¸ç”¨çš„æ“ä½œåˆ†æžï¼Œå¦‚æœ€å°å€¼ã€æœ€å¤§å€¼ã€å‡å€¼ç­‰
+# åªéœ€è¦å…³æ³¨è¿™äº›æŒ‡ä»¤ä¾¿å¯ä»¥å®Œæˆå¾ˆå¥½çš„æ•°æ®æŽ¢ç´¢å·¥ä½œã€‚
 
 library(dplyr)
 data("mtcars")
@@ -62,13 +62,13 @@ myirisdata %>%
 #rename the variables
 mynewdata %>% rename(mile = mpg)
 
-# data.table¿ÉÒÔ¸ü¿ìµØÍê³ÉÊý¾Ý¼¯µÄÊý¾Ý´¦Àí¹¤×÷¡£
-# ·ÅÆúÑ¡È¡ÐÐ»òÁÐ×Ó¼¯µÄ´«Í³·½·¨£¬ÓÃÕâ¸ö°ü½øÐÐÊý¾Ý´¦Àí¡£
-# ÓÃ×îÉÙµÄ´úÂë£¬Äã¿ÉÒÔ×ö×î¶àµÄÊÂ¡£
-# Ïà±ÈÊ¹ÓÃdata.frame£¬data.table¿ÉÒÔ°ïÖú¼õÉÙÔËËãÊ±¼ä¡£
-# Ò»¸öÊý¾Ý±í¸ñ°üº¬Èý²¿·Ö£¬¼´DT[i, j, by]¡£
-# ¿ÉÒÔÀí½âÎªRÓÃiÀ´Ñ¡³öÐÐµÄ×Ó¼¯£¬²¢¼ÆËãÍ¨¹ýbyÀ´·Ö×éµÄj¡£
-# ´ó¶àÊýÊ±ºò£¬byÊÇÓÃÓÚÀà±ð±äÁ¿µÄ¡£
+# data.tableå¯ä»¥æ›´å¿«åœ°å®Œæˆæ•°æ®é›†çš„æ•°æ®å¤„ç†å·¥ä½œã€‚
+# æ”¾å¼ƒé€‰å–è¡Œæˆ–åˆ—å­é›†çš„ä¼ ç»Ÿæ–¹æ³•ï¼Œç”¨è¿™ä¸ªåŒ…è¿›è¡Œæ•°æ®å¤„ç†ã€‚
+# ç”¨æœ€å°‘çš„ä»£ç ï¼Œä½ å¯ä»¥åšæœ€å¤šçš„äº‹ã€‚
+# ç›¸æ¯”ä½¿ç”¨data.frameï¼Œdata.tableå¯ä»¥å¸®åŠ©å‡å°‘è¿ç®—æ—¶é—´ã€‚
+# ä¸€ä¸ªæ•°æ®è¡¨æ ¼åŒ…å«ä¸‰éƒ¨åˆ†ï¼Œå³DT[i, j, by]ã€‚
+# å¯ä»¥ç†è§£ä¸ºRç”¨iæ¥é€‰å‡ºè¡Œçš„å­é›†ï¼Œå¹¶è®¡ç®—é€šè¿‡byæ¥åˆ†ç»„çš„jã€‚
+# å¤§å¤šæ•°æ—¶å€™ï¼Œbyæ˜¯ç”¨äºŽç±»åˆ«å˜é‡çš„ã€‚
 library(data.table)
 #load data
 data("airquality")
@@ -131,18 +131,18 @@ ggplot(diamonds,aes(x=carat))+
   scale_x_continuous(breaks = seq(0,3,by=0.5))
 
 #reshape2
-# Õâ¸ö°ü¶ÔÓÚÖØËÜÊý¾Ý¸ñÊ½ºÜÓÐÓÃ¡£
-# ÎÒÃÇ¶¼ÖªµÀÊý¾Ý»áÓÐºÜ¶à²»Í¬µÄ±íÏÖ¸ñÊ½¡£
-# Òò´Ë£¬ÎÒÃÇÐèÒª¸ù¾ÝÐèÒª¡°Ñ±·þ¡±ËüÃÇÒÔÎª¼ºÓÃ¡£
-# Í¨³££¬ÔÚRÖÐÖØËÜÊý¾Ý¸ñÊ½·Ç³£ÎÞÁÄºÍÂé·³¡£
-# R»ù´¡º¯ÊýÖÐÓÐÒ»¸öAggregationº¯Êý£¬ÓÃÀ´Ëõ¼õ²¢ÖØÐÂÅÅÁÐÊý¾ÝÎª¸ü¶ÌÐ¡µÄ¸ñÊ½£¬
-# µ«ÊÇ»á´ó´ó¼õÉÙÊý¾Ý°üº¬µÄÐÅÏ¢Á¿¡£
-# Aggregation°üÀ¨tapply£¬byºÍaggregate»ù´¡º¯Êý¡£
-# reshape°ü»á¿Ë·þÕâÐ©ÎÊÌâ¡£
-# ÔÚÕâÀïÎÒÃÇÊÔ×Å°ÑÓÐÒ»ÑùÖµµÄÌØÕ÷ºÏ²¢ÔÚÒ»Æð¡£
-# ËüÓÐÁ½¸öº¯Êý£¬¼´meltºÍcast¡£
-# melt: Õâ¸öº¯Êý°ÑÊý¾Ý´Ó¿í¸ñÊ½×ª»¯Îª³¤¸ñÊ½¡£
-# ÕâÊÇÒ»ÖÖ°Ñ¶à¸öÀà±ðÁÐ¡°ÈÚºÏ¡±ÎªÒ»ÐÐµÄ½á¹¹ÖØ×é¡£ÎÒÃÇÀ´Í¨¹ý´úÂëÀí½âËüÊÇÔõÃ´ÔËÐÐµÄ¡£
+# è¿™ä¸ªåŒ…å¯¹äºŽé‡å¡‘æ•°æ®æ ¼å¼å¾ˆæœ‰ç”¨ã€‚
+# æˆ‘ä»¬éƒ½çŸ¥é“æ•°æ®ä¼šæœ‰å¾ˆå¤šä¸åŒçš„è¡¨çŽ°æ ¼å¼ã€‚
+# å› æ­¤ï¼Œæˆ‘ä»¬éœ€è¦æ ¹æ®éœ€è¦â€œé©¯æœâ€å®ƒä»¬ä»¥ä¸ºå·±ç”¨ã€‚
+# é€šå¸¸ï¼Œåœ¨Rä¸­é‡å¡‘æ•°æ®æ ¼å¼éžå¸¸æ— èŠå’Œéº»çƒ¦ã€‚
+# RåŸºç¡€å‡½æ•°ä¸­æœ‰ä¸€ä¸ªAggregationå‡½æ•°ï¼Œç”¨æ¥ç¼©å‡å¹¶é‡æ–°æŽ’åˆ—æ•°æ®ä¸ºæ›´çŸ­å°çš„æ ¼å¼ï¼Œ
+# ä½†æ˜¯ä¼šå¤§å¤§å‡å°‘æ•°æ®åŒ…å«çš„ä¿¡æ¯é‡ã€‚
+# AggregationåŒ…æ‹¬tapplyï¼Œbyå’ŒaggregateåŸºç¡€å‡½æ•°ã€‚
+# reshapeåŒ…ä¼šå…‹æœè¿™äº›é—®é¢˜ã€‚
+# åœ¨è¿™é‡Œæˆ‘ä»¬è¯•ç€æŠŠæœ‰ä¸€æ ·å€¼çš„ç‰¹å¾åˆå¹¶åœ¨ä¸€èµ·ã€‚
+# å®ƒæœ‰ä¸¤ä¸ªå‡½æ•°ï¼Œå³meltå’Œcastã€‚
+# melt: è¿™ä¸ªå‡½æ•°æŠŠæ•°æ®ä»Žå®½æ ¼å¼è½¬åŒ–ä¸ºé•¿æ ¼å¼ã€‚
+# è¿™æ˜¯ä¸€ç§æŠŠå¤šä¸ªç±»åˆ«åˆ—â€œèžåˆâ€ä¸ºä¸€è¡Œçš„ç»“æž„é‡ç»„ã€‚æˆ‘ä»¬æ¥é€šè¿‡ä»£ç ç†è§£å®ƒæ˜¯æ€Žä¹ˆè¿è¡Œçš„ã€‚
 
 #create a data
 ID<-c(1,2,3,4,5)
@@ -155,20 +155,20 @@ data.table(thisData)
 library(reshape2)
 mt<-melt(thisData,id=(c('ID','Names')))
 
-# Cast: Õâ¸öº¯Êý°ÑÊý¾Ý´Ó³¤¸ñÊ½×ª»»Îª¿í¸ñÊ½¡£
-# ËüÊ¼ÓÚÈÚºÏºóµÄÊý¾Ý£¬È»ºó°ÑÊý¾ÝÖØÐÂ¹¹ÔìÎª³¤¸ñÊ½¡£
-# Ëü¾ÍÊÇmeltº¯ÊýµÄ·´Ïò²Ù×÷¡£Ëü°üÀ¨Á½¸öº¯Êý£¬¼´£¬dcastºÍacast¡£
-# dcast·µ»ØÊý¾Ý¿ò×÷ÎªÊä³ö½á¹û¡£acast·µ»ØÏòÁ¿/¾ØÕó/Êý×é×÷ÎªÊä³ö½á¹û¡£
+# Cast: è¿™ä¸ªå‡½æ•°æŠŠæ•°æ®ä»Žé•¿æ ¼å¼è½¬æ¢ä¸ºå®½æ ¼å¼ã€‚
+# å®ƒå§‹äºŽèžåˆåŽçš„æ•°æ®ï¼Œç„¶åŽæŠŠæ•°æ®é‡æ–°æž„é€ ä¸ºé•¿æ ¼å¼ã€‚
+# å®ƒå°±æ˜¯meltå‡½æ•°çš„åå‘æ“ä½œã€‚å®ƒåŒ…æ‹¬ä¸¤ä¸ªå‡½æ•°ï¼Œå³ï¼Œdcastå’Œacastã€‚
+# dcastè¿”å›žæ•°æ®æ¡†ä½œä¸ºè¾“å‡ºç»“æžœã€‚acastè¿”å›žå‘é‡/çŸ©é˜µ/æ•°ç»„ä½œä¸ºè¾“å‡ºç»“æžœã€‚
 # mcast<-dcast(mt,DateOfBirth+Subject ~ variable)
 # dcast(mt,DateOfBirth+variable~Subject)
 
 #reader
-# readrÓÃÀ´°Ñ²»Í¬¸ñÊ½µÄÊý¾Ý¶ÁÈëRÖÐ£¬Í¨¹ý±È´«Í³·½·¨¿ìÊ®±¶µÄËÙ¶È¡£
-# ÔÚ´Ë£¬×Ö·ûÐÍ±äÁ¿²»»á±»×ª»¯ÎªÒò×ÓÐÍ±äÁ¿£¨ËùÒÔ²»ÔÙÓÐstringAsFactors = FALSEÃüÁî£©¡£
-# Õâ¸ö°ü¿ÉÒÔ´úÌæ´«Í³µÄR»ù´¡º¯Êýread.csv()ºÍread.table()¡£Ëü¿ÉÒÔÓÃÀ´¶ÁÈëÒÔÏÂ¸ñÊ½µÄÊý¾Ý£º
-# ·Ö¸ô·ûÎÄ¼þ£ºread_delim()£¬read_csv()£¬read_tsv()ºÍread_csv2()
-# ¹Ì¶¨¿í¶ÈÎÄ¼þ£ºread_fwf()ºÍread_table()
-# ÍøÂçÈÕÖ¾ÎÄ¼þ£ºread_log()
+# readrç”¨æ¥æŠŠä¸åŒæ ¼å¼çš„æ•°æ®è¯»å…¥Rä¸­ï¼Œé€šè¿‡æ¯”ä¼ ç»Ÿæ–¹æ³•å¿«åå€çš„é€Ÿåº¦ã€‚
+# åœ¨æ­¤ï¼Œå­—ç¬¦åž‹å˜é‡ä¸ä¼šè¢«è½¬åŒ–ä¸ºå› å­åž‹å˜é‡ï¼ˆæ‰€ä»¥ä¸å†æœ‰stringAsFactors = FALSEå‘½ä»¤ï¼‰ã€‚
+# è¿™ä¸ªåŒ…å¯ä»¥ä»£æ›¿ä¼ ç»Ÿçš„RåŸºç¡€å‡½æ•°read.csv()å’Œread.table()ã€‚å®ƒå¯ä»¥ç”¨æ¥è¯»å…¥ä»¥ä¸‹æ ¼å¼çš„æ•°æ®ï¼š
+# åˆ†éš”ç¬¦æ–‡ä»¶ï¼šread_delim()ï¼Œread_csv()ï¼Œread_tsv()å’Œread_csv2()
+# å›ºå®šå®½åº¦æ–‡ä»¶ï¼šread_fwf()å’Œread_table()
+# ç½‘ç»œæ—¥å¿—æ–‡ä»¶ï¼šread_log()
 
 library(NCmisc)
 library(reader)
@@ -185,16 +185,16 @@ read_csv("iris.csv",col_types=list(
 ))
 
 #tidyr
-# ËüÖ÷ÒªÓÃËÄ¸öº¯ÊýÀ´Íê³ÉÕâ¸öÈÎÎñ¡£
-# ÎãÓ¹×¸ÑÔ£¬µ±Äã·¢ÏÖ×Ô¼ºÔÚÊý¾ÝÌ½Ë÷½×¶Î¿¨¿ÇµÄÊ±ºò£¬
-# Äã¿ÉÒÔ£¨ºÍdplyr°üÒ»Æð£©ËæÊ±Ê¹ÓÃÕâÐ©º¯Êý¡£
-# ÕâÁ½¸ö°üÐÎ³ÉÁËÒ»¸öÊµÁ¦Ç¿´óµÄ×éºÏ¡£ËüÃÇºÜºÃÑ§£¬´úÂëÈÝÒ×Ð©£¬Ó¦ÓÃ±ã½Ý¡£
-# ÕâËÄ¸öº¯ÊýÊÇ£º
-# gather()¡ª¡ªËü°Ñ¶àÁÐ·ÅÔÚÒ»Æð£¬È»ºó×ª»¯Îªkey:value¶Ô¡£
-# Õâ¸öº¯Êý»á°Ñ¿í¸ñÊ½µÄÊý¾Ý×ª»¯Îª³¤¸ñÊ½¡£ËüÊÇreshape°üÖÐmeltº¯ÊýµÄÒ»¸öÌæ´ú¡£
-# spread()¡ª¡ªËüµÄ¹¦ÄÜºÍgatherÏà·´£¬°Ñkey:value¶Ô×ª»¯³É²»Í¬µÄÁÐ¡£
-# separate()¡ª¡ªËü»á°ÑÒ»ÁÐ²ð·ÖÎª¶àÁÐ
-# unite()¡ª¡ªËüµÄ¹¦ÄÜºÍseparateÏà·´£¬°Ñ¶àÁÐºÏ²¢ÎªÒ»ÁÐ
+# å®ƒä¸»è¦ç”¨å››ä¸ªå‡½æ•°æ¥å®Œæˆè¿™ä¸ªä»»åŠ¡ã€‚
+# æ¯‹åº¸èµ˜è¨€ï¼Œå½“ä½ å‘çŽ°è‡ªå·±åœ¨æ•°æ®æŽ¢ç´¢é˜¶æ®µå¡å£³çš„æ—¶å€™ï¼Œ
+# ä½ å¯ä»¥ï¼ˆå’ŒdplyråŒ…ä¸€èµ·ï¼‰éšæ—¶ä½¿ç”¨è¿™äº›å‡½æ•°ã€‚
+# è¿™ä¸¤ä¸ªåŒ…å½¢æˆäº†ä¸€ä¸ªå®žåŠ›å¼ºå¤§çš„ç»„åˆã€‚å®ƒä»¬å¾ˆå¥½å­¦ï¼Œä»£ç å®¹æ˜“äº›ï¼Œåº”ç”¨ä¾¿æ·ã€‚
+# è¿™å››ä¸ªå‡½æ•°æ˜¯ï¼š
+# gather()â€”â€”å®ƒæŠŠå¤šåˆ—æ”¾åœ¨ä¸€èµ·ï¼Œç„¶åŽè½¬åŒ–ä¸ºkey:valueå¯¹ã€‚
+# è¿™ä¸ªå‡½æ•°ä¼šæŠŠå®½æ ¼å¼çš„æ•°æ®è½¬åŒ–ä¸ºé•¿æ ¼å¼ã€‚å®ƒæ˜¯reshapeåŒ…ä¸­meltå‡½æ•°çš„ä¸€ä¸ªæ›¿ä»£ã€‚
+# spread()â€”â€”å®ƒçš„åŠŸèƒ½å’Œgatherç›¸åï¼ŒæŠŠkey:valueå¯¹è½¬åŒ–æˆä¸åŒçš„åˆ—ã€‚
+# separate()â€”â€”å®ƒä¼šæŠŠä¸€åˆ—æ‹†åˆ†ä¸ºå¤šåˆ—
+# unite()â€”â€”å®ƒçš„åŠŸèƒ½å’Œseparateç›¸åï¼ŒæŠŠå¤šåˆ—åˆå¹¶ä¸ºä¸€åˆ—
 library(tidyr)
 names<-c('A','B','C','D','E','A','B')
 weight<-c(55,49,76,71,65,44,34)
@@ -205,9 +205,9 @@ tdata<-data.frame(names,age,weight,Class)
 #using gather function
 long_t<-tdata %>% gather(Key,Value,weight:Class)
 
-# º¯Êýseparate×îÊÊÓÃÓÚÓÐÊ±¼ä±äÁ¿µÄÊý¾Ý¼¯¡£
-# ÓÉÓÚÁÐÖÐ°üº¬ÁËºÜ¶àÐÅÏ¢£¬Òò´Ë°ÑËüÃÇ²ð·Ö¿ªÀ´²¢·Ö±ðÊ¹ÓÃËüÃÇºÜÓÐ±ØÒª¡£
-# Ê¹ÓÃÒÔÏÂµÄ´úÂë£¬ÎÒ°ÑÒ»¸öÁÐ²ð·Ö³ÉÁËÈÕÆÚ£¬ÔÂ·ÝºÍÄê¡£
+# å‡½æ•°separateæœ€é€‚ç”¨äºŽæœ‰æ—¶é—´å˜é‡çš„æ•°æ®é›†ã€‚
+# ç”±äºŽåˆ—ä¸­åŒ…å«äº†å¾ˆå¤šä¿¡æ¯ï¼Œå› æ­¤æŠŠå®ƒä»¬æ‹†åˆ†å¼€æ¥å¹¶åˆ†åˆ«ä½¿ç”¨å®ƒä»¬å¾ˆæœ‰å¿…è¦ã€‚
+# ä½¿ç”¨ä»¥ä¸‹çš„ä»£ç ï¼Œæˆ‘æŠŠä¸€ä¸ªåˆ—æ‹†åˆ†æˆäº†æ—¥æœŸï¼Œæœˆä»½å’Œå¹´ã€‚
 Humidity <- c(37.79, 42.34, 52.16, 44.57, 43.83, 44.59)
 Rain <- c(0.971360441, 1.10969716, 1.064475853, 0.953183435, 0.98878849, 0.939676146)
 Time <- c("27/01/2015 15:44","23/02/2015 23:24", "31/03/2015 19:15", "20/01/2015 20:52", "23/02/2015 07:46", "31/01/2015 01:55")
@@ -220,12 +220,13 @@ unite_d <- separate_d%>% unite(Time, c(Date, Month, Year), sep = "/")
 wide_t <- long_t %>% spread(Key, Value)
 
 #lubridate
-# Lubridate°ü¿ÉÒÔ¼õÉÙÔÚRÖÐ²Ù×÷Ê±¼ä±äÁ¿µÄÍ´¿à¡£
-# ´Ë°üµÄÄÚÖÃº¯ÊýÌá¹©ÁËºÜºÃµÄ½âÎöÈÕÆÚÓëÊ±¼äµÄ±ãÀû·½·¨¡£
-# Õâ¸ö°ü³£ÓÃÓÚ°üº¬Ê±¼äÊý¾ÝµÄÊý¾Ý¼¯¡£ÔÚ´ËÎÒÕ¹Ê¾ÁËLubridate°üÖÐµÄÈý¸öº¯Êý¡£
-# ÕâÈý¸öº¯ÊýÊÇupdate£¬durationºÍdate extraction¡£
-# ×÷ÎªÒ»¸ö³õÑ§Õß£¬ÁË½âÕâÈý¸öº¯Êý×ãÒÔÈÃÄã³ÉÎª´¦ÀíÊ±¼ä±äÁ¿µÄ×¨¼Ò¡£
-# ¾¡¹ÜRÓÐÄÚÖÃº¯ÊýÀ´´¦ÀíÈÕÆÚ£¬Õâ¸ö°üµÄ´¦Àí·½·¨»á¸ü¿ì¡£
+# LubridateåŒ…å¯ä»¥å‡å°‘åœ¨Rä¸­æ“ä½œæ—¶é—´å˜é‡çš„ç—›è‹¦ã€‚
+# æ­¤åŒ…çš„å†…ç½®å‡½æ•°æä¾›äº†å¾ˆå¥½çš„è§£æžæ—¥æœŸä¸Žæ—¶é—´çš„ä¾¿åˆ©æ–¹æ³•ã€‚
+# è¿™ä¸ªåŒ…å¸¸ç”¨äºŽåŒ…å«æ—¶é—´æ•°æ®çš„æ•°æ®é›†ã€‚åœ¨æ­¤æˆ‘å±•ç¤ºäº†LubridateåŒ…ä¸­çš„ä¸‰ä¸ªå‡½æ•°ã€‚
+# è¿™ä¸‰ä¸ªå‡½æ•°æ˜¯updateï¼Œdurationå’Œdate extractionã€‚
+# ä½œä¸ºä¸€ä¸ªåˆå­¦è€…ï¼Œäº†è§£è¿™ä¸‰ä¸ªå‡½æ•°è¶³ä»¥è®©ä½ æˆä¸ºå¤„ç†æ—¶é—´å˜é‡çš„ä¸“å®¶ã€‚
+# å°½ç®¡Ræœ‰å†…ç½®å‡½æ•°æ¥å¤„ç†æ—¥æœŸï¼Œè¿™ä¸ªåŒ…çš„å¤„ç†æ–¹æ³•ä¼šæ›´å¿«ã€‚
+
 library(lubridate)
 #current date and time
 now()
